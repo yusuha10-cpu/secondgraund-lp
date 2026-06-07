@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>SECOND GROUND ｜ 第2のグラウンド ── 原案＋3つのデザイン案（全4案）</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --bg:#101115; --bg2:#171920; --card:#1b1e26; --line:rgba(255,255,255,.1);
+  --txt:#eceef3; --mut:#9aa0ad; --mut2:#6c7280; --red:#e3242b;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Noto Sans JP",sans-serif;background:var(--bg);color:var(--txt);
+  -webkit-font-smoothing:antialiased;line-height:1.85}
+a{color:inherit;text-decoration:none}
+.osw{font-family:"Oswald",sans-serif}
+.wrap{max-width:1320px;margin:0 auto;padding:0 32px}
+
+/* hero */
+.top{padding:72px 0 40px;border-bottom:1px solid var(--line);position:relative;overflow:hidden}
+.top::before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(60% 70% at 85% -20%,rgba(227,36,43,.16),transparent 60%)}
+.top .wrap{position:relative}
+.brand{display:flex;align-items:center;gap:12px;margin-bottom:30px}
+.brand .mk{width:38px;height:38px;border-radius:50%;background:var(--red);display:grid;place-items:center;box-shadow:0 0 0 4px rgba(227,36,43,.18)}
+.brand .mk svg{width:21px;height:21px}
+.brand b{font-weight:900;letter-spacing:.16em;font-size:16px}
+.brand small{display:block;font-size:9.5px;letter-spacing:.34em;color:var(--mut);font-weight:700;margin-top:2px}
+.eyebrow{font-family:"Oswald";font-weight:600;font-size:12.5px;letter-spacing:.34em;color:var(--red);text-transform:uppercase;margin-bottom:16px}
+.top h1{font-size:clamp(28px,4.4vw,48px);font-weight:900;line-height:1.22;letter-spacing:.01em;max-width:18em;text-wrap:balance}
+.top h1 em{font-style:normal;color:var(--red)}
+.top .sub{margin-top:20px;color:var(--mut);font-size:15px;max-width:46em;line-height:2}
+.top .sub code{color:#eceef3}
+
+/* meta strip */
+.meta{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin:34px 0 4px}
+.meta .m{background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:18px 20px}
+.meta .m .k{font-family:"Oswald";font-size:10.5px;letter-spacing:.18em;color:var(--mut2);text-transform:uppercase;margin-bottom:8px}
+.meta .m .v{font-size:13.5px;color:var(--txt);font-weight:500;line-height:1.7}
+.meta .m .v b{color:var(--red);font-weight:700}
+@media(max-width:820px){.meta{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.meta{grid-template-columns:1fr}}
+
+/* section label */
+.sectit{display:flex;align-items:baseline;gap:16px;margin:60px 0 26px}
+.sectit .en{font-family:"Anton";font-size:22px;color:var(--mut2);letter-spacing:.04em}
+.sectit h2{font-size:18px;font-weight:900;letter-spacing:.02em}
+
+/* cards */
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;padding-bottom:30px}
+@media(max-width:1100px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:620px){.grid{grid-template-columns:1fr;max-width:460px;margin-inline:auto}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;
+  transition:transform .25s,border-color .25s,box-shadow .25s}
+.card:hover{transform:translateY(-6px);border-color:rgba(255,255,255,.24);box-shadow:0 30px 60px -34px rgba(0,0,0,.8)}
+.card.is-draft{border-color:rgba(227,36,43,.4)}
+.thumb{position:relative;aspect-ratio:16/10.5;overflow:hidden;background:#000;border-bottom:1px solid var(--line)}
+.thumb img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:top center;display:block}
+.thumb .tag{position:absolute;top:14px;left:14px;z-index:2;font-family:"Oswald";font-weight:600;font-size:11px;letter-spacing:.16em;
+  background:rgba(0,0,0,.6);backdrop-filter:blur(4px);color:#fff;padding:6px 12px;border-radius:99px;border:1px solid rgba(255,255,255,.18)}
+.thumb .open{position:absolute;inset:0;z-index:3;display:flex;align-items:flex-end;justify-content:flex-end;padding:16px;
+  background:linear-gradient(transparent 55%,rgba(0,0,0,.5));opacity:0;transition:opacity .25s}
+.card:hover .thumb .open{opacity:1}
+.thumb .open span{background:#fff;color:#111;font-weight:900;font-size:12px;padding:9px 16px;border-radius:99px;display:inline-flex;gap:7px;align-items:center}
+
+/* CSS-rendered thumbnail for the draft (no image asset) */
+.draftthumb{position:absolute;inset:0;background:#101216;overflow:hidden}
+.draftthumb::before{content:"";position:absolute;right:-22%;top:-30%;width:80%;aspect-ratio:1;border-radius:50%;
+  background:radial-gradient(circle at 38% 38%,#e3242b,#b00010 60%,#7d0009);opacity:.92}
+.draftthumb::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#101216 0%,rgba(16,18,22,.55) 60%,transparent)}
+.draftthumb .dt{position:absolute;z-index:2;left:9%;top:50%;transform:translateY(-50%);right:9%}
+.draftthumb .dt .eb{font-family:"Oswald";font-weight:600;font-size:clamp(7px,1.4vw,10px);letter-spacing:.22em;color:rgba(255,255,255,.7);margin-bottom:7px}
+.draftthumb .dt h4{font-weight:900;font-size:clamp(15px,3.4vw,26px);line-height:1.25;color:#fff}
+.draftthumb .dt h4 em{font-style:normal;color:#ff5560}
+.draftthumb .dt p{font-size:clamp(8px,1.5vw,11px);color:rgba(255,255,255,.72);margin-top:8px}
+.draftthumb .dt .btn{display:inline-block;margin-top:11px;background:#e3242b;color:#fff;font-weight:900;font-size:clamp(7px,1.4vw,10px);
+  padding:6px 12px;border-radius:5px}
+
+.cbody{padding:22px 24px 26px;display:flex;flex-direction:column;flex:1}
+.cbody .ix{font-family:"Anton";font-size:13px;color:var(--red);letter-spacing:.06em;margin-bottom:8px}
+.cbody h3{font-size:20px;font-weight:900;letter-spacing:.01em}
+.cbody .role{font-family:"Oswald";font-size:11px;letter-spacing:.14em;color:var(--mut2);text-transform:uppercase;margin-top:3px}
+.cbody p{margin-top:14px;font-size:13px;color:var(--mut);line-height:1.95}
+.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:16px}
+.tags span{font-size:10.5px;font-weight:700;color:var(--mut);background:var(--bg2);border:1px solid var(--line);border-radius:99px;padding:5px 11px}
+.cbody .go{margin-top:20px}
+.cbody .go a{display:flex;align-items:center;justify-content:center;gap:9px;background:var(--red);color:#fff;font-weight:900;font-size:14px;
+  padding:14px;border-radius:8px;transition:background .2s}
+.cbody .go a:hover{background:#b3171d}
+
+/* reference row */
+.draft{display:grid;grid-template-columns:1fr;gap:16px;background:var(--bg2);border:1px solid var(--line);border-radius:16px;padding:26px 30px;margin-bottom:18px}
+.draft .lead{display:flex;justify-content:space-between;align-items:flex-start;gap:24px;flex-wrap:wrap}
+.draft p{font-size:13px;color:var(--mut);line-height:1.9;max-width:48em}
+.draft p b{color:var(--txt)}
+.draft .dl{display:flex;gap:12px;flex-wrap:wrap}
+.draft .dl a{display:inline-flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--line);border-radius:9px;
+  padding:12px 16px;font-size:12.5px;font-weight:700;color:var(--txt);transition:border-color .2s,background .2s;white-space:nowrap}
+.draft .dl a:hover{border-color:var(--red);background:#22262f}
+.draft .dl a svg{width:17px;height:17px;color:var(--red);flex:0 0 auto}
+.draft .dl a small{display:block;font-weight:500;color:var(--mut2);font-size:10.5px;margin-top:1px}
+
+/* shared system note */
+.note{background:var(--bg2);border:1px solid var(--line);border-radius:16px;padding:30px 32px;margin:8px 0 60px}
+.note h4{font-size:14px;font-weight:900;letter-spacing:.04em;margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.note h4::before{content:"";width:22px;height:3px;background:var(--red)}
+.note ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:12px 34px}
+.note li{font-size:13px;color:var(--mut);line-height:1.8;padding-left:18px;position:relative}
+.note li::before{content:"›";position:absolute;left:0;color:var(--red);font-weight:900}
+.note li b{color:var(--txt);font-weight:700}
+@media(max-width:680px){.note ul{grid-template-columns:1fr}}
+
+.foot{border-top:1px solid var(--line);padding:30px 0 60px;color:var(--mut2);font-size:11.5px;line-height:1.9}
+.foot b{color:var(--mut);display:block;margin-bottom:6px;font-family:"Oswald";letter-spacing:.08em}
+.usage{background:var(--bg2);border:1px dashed var(--line);border-radius:12px;padding:18px 24px;margin:0 0 40px;font-size:12px;color:var(--mut);line-height:1.95}
+.usage b{color:var(--txt)}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <div class="brand">
+      <span class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M5 7c3 2 3 8 0 10M19 7c-3 2-3 8 0 10"/></svg></span>
+      <span><b>SECOND GROUND</b><small>第2のグラウンド</small></span>
+    </div>
+    <p class="eyebrow">Shared Package ／ 原案 + 3 Directions ＝ 全4案</p>
+    <h1>プロ野球選手のための<em>「複数戸不動産投資」</em>ランディングページ。<br />4つのデザイン案を見比べる。</h1>
+    <p class="sub">最初に作成した<b>原案（叩き台）</b>と、それを土台に展開した<b>3つのデザイン案</b>──合わせて<b>全4案</b>を1つにまとめた共有パッケージです。すべてオフラインで動作します。<b>この</b><code>index.html</code><b>をブラウザで開くだけ</b>。下のサムネイル右下の「開く」から、各案をスクロール・スマホ表示・追従CTAまでそのままご確認いただけます。</p>
+
+    <div class="meta">
+      <div class="m"><div class="k">Target</div><div class="v">プロ野球選手（20〜30代）／ 多忙・金融知識は浅め</div></div>
+      <div class="m"><div class="k">Goal</div><div class="v"><b>無料相談・無料診断・資料請求</b>への誘導</div></div>
+      <div class="m"><div class="k">Tone</div><div class="v">赤 × 黒 × 白／極太ゴシック・アスリート感</div></div>
+      <div class="m"><div class="k">Compliance</div><div class="v">数値は全て<b>モデルケース</b>表記・利回り保証なし・免責文をフッターに</div></div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="sectit">
+    <span class="en">A–D</span>
+    <h2>全4案を比較する</h2>
+  </div>
+
+  <div class="grid">
+
+    <!-- D: 原案・叩き台 -->
+    <article class="card is-draft">
+      <div class="thumb">
+        <span class="tag">原案 ／ DRAFT</span>
+        <div class="draftthumb">
+          <div class="dt">
+            <div class="eb">FOR PRO BASEBALL PLAYERS</div>
+            <h4>引退後も、<em>安定した収入</em>を。</h4>
+            <p>“第2のグラウンド”は資産から生まれる</p>
+            <span class="btn">無料相談はこちら ›</span>
+          </div>
+        </div>
+        <a class="open" href="proposal-D-DRAFT.html" target="_blank" rel="noopener"><span>開く ↗</span></a>
+      </div>
+      <div class="cbody">
+        <div class="ix">D</div>
+        <h3>DRAFT（原案）</h3>
+        <div class="role">叩き台 × ベースライン</div>
+        <p>最初に作成したシンプルな原案。赤×黒の王道構成で①〜⑨をひと通り実装し、コピーと流れを確認するための土台です。A〜Cはこの構成を引き継いで発展させています。</p>
+        <div class="tags"><span>赤×黒 王道</span><span>構成確認用</span><span>①〜⑨実装</span></div>
+        <div class="go"><a href="proposal-D-DRAFT.html" target="_blank" rel="noopener">この案を開く</a></div>
+      </div>
+    </article>
+
+    <!-- A -->
+    <article class="card">
+      <div class="thumb">
+        <span class="tag">A ／ STADIUM</span>
+        <img src="thumbs/a.png" alt="Pattern A — STADIUM hero preview" loading="lazy" />
+        <a class="open" href="proposal-A-STADIUM.html" target="_blank" rel="noopener"><span>開く ↗</span></a>
+      </div>
+      <div class="cbody">
+        <div class="ix">A</div>
+        <h3>STADIUM</h3>
+        <div class="role">忠実 × ポスター</div>
+        <p>ご指定のトーンに最も忠実な王道案。黒背景＋赤い円のヒーロー、赤ベタと白の交互、極太ゴシックと英語ラベル。スポーツポスターのような力強さで、最短で意図が伝わります。</p>
+        <div class="tags"><span>赤ベタ交互</span><span>Anton + Noto 900</span><span>力強い王道</span></div>
+        <div class="go"><a href="proposal-A-STADIUM.html" target="_blank" rel="noopener">この案を開く</a></div>
+      </div>
+    </article>
+
+    <!-- B -->
+    <article class="card">
+      <div class="thumb">
+        <span class="tag">B ／ LEDGER</span>
+        <img src="thumbs/b.png" alt="Pattern B — LEDGER hero preview" loading="lazy" />
+        <a class="open" href="proposal-B-LEDGER.html" target="_blank" rel="noopener"><span>開く ↗</span></a>
+      </div>
+      <div class="cbody">
+        <div class="ix">B</div>
+        <h3>LEDGER</h3>
+        <div class="role">上質 × エディトリアル</div>
+        <p>"資産形成"の信頼感を前に出した上質案。アイボリー×インク×深紅、明朝の見出しと余白の効いたグリッド。落ち着いた説得力で、堅実な資産パートナーらしさを演出します。</p>
+        <div class="tags"><span>アイボリー基調</span><span>明朝 + ゴシック</span><span>データ訴求</span></div>
+        <div class="go"><a href="proposal-B-LEDGER.html" target="_blank" rel="noopener">この案を開く</a></div>
+      </div>
+    </article>
+
+    <!-- C -->
+    <article class="card">
+      <div class="thumb">
+        <span class="tag">C ／ FLOODLIGHT</span>
+        <img src="thumbs/c.png" alt="Pattern C — FLOODLIGHT hero preview" loading="lazy" />
+        <a class="open" href="proposal-C-FLOODLIGHT.html" target="_blank" rel="noopener"><span>開く ↗</span></a>
+      </div>
+      <div class="cbody">
+        <div class="ix">C</div>
+        <h3>FLOODLIGHT</h3>
+        <div class="role">没入 × ナイター</div>
+        <p>ナイターの照明をモチーフにした没入案。全面ダーク＋赤ネオン、スコアボード風の数字表現とコンデンス書体。ドラマチックで現代的、若い選手の心を掴むエモーショナルな世界観です。</p>
+        <div class="tags"><span>全面ダーク</span><span>スコアボード数字</span><span>ネオン演出</span></div>
+        <div class="go"><a href="proposal-C-FLOODLIGHT.html" target="_blank" rel="noopener">この案を開く</a></div>
+      </div>
+    </article>
+
+  </div>
+
+  <div class="sectit">
+    <span class="en">REF</span>
+    <h2>参考：横展開のベースにした医師向けLP</h2>
+  </div>
+
+  <div class="draft">
+    <div class="lead">
+      <p>今回の構成は、<b>医師向け不動産投資LP</b>を参考に、プロ野球選手向けへ「横展開」したものです。元にした医師向けLPの<b>PC版・スマホ版</b>を参考資料として同梱しています（デザインは流用せず、構成・訴求の流れのみ参考）。</p>
+      <div class="dl">
+        <a href="original-draft-desktop.pdf" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2"/></svg>
+          <span>参考・PC版<small>original-draft-desktop.pdf</small></span>
+        </a>
+        <a href="original-draft-mobile.pdf" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2"/></svg>
+          <span>参考・スマホ版<small>original-draft-mobile.pdf</small></span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="sectit">
+    <span class="en">＝</span>
+    <h2>全案に共通する設計</h2>
+  </div>
+
+  <div class="note">
+    <h4>前提・共通仕様（ご確認ください）</h4>
+    <ul>
+      <li><b>構成は①〜⑨を共通</b>：FV／共感／問題提起／解決策／シミュレーション／成功事例／信頼・サポート／年俸別シナリオ／最終CTA。</li>
+      <li><b>レスポンシブ対応</b>：PC・タブレット・スマホで最適化。スマホには下部に<b>追従CTAバー</b>（相談・無料診断）を実装。</li>
+      <li><b>コンプライアンス配慮</b>：利回り・収益を保証する表現は不使用。数値は全て「モデルケース・イメージ」と明記し、リスク免責文をフッターに記載。</li>
+      <li><b>数字・写真は仮</b>：家賃・融資枠などはモデル値、写真はプレースホルダー。実データ・実写真をいただき次第差し替えます。</li>
+      <li><b>ブランド名は仮称「SECOND GROUND／第2のグラウンド」</b>：正式名称・ロゴをいただければ差し替えます。</li>
+      <li><b>原案（D）はベースライン</b>：A〜Cはこの原案の構成を引き継ぎ、デザインの方向性を変えた発展案です。</li>
+    </ul>
+  </div>
+
+  <div class="usage">
+    <b>共有方法：</b>このフォルダ（ZIP）をそのままお渡しください。受け取った方は解凍後、<b>index.html</b> をダブルクリックしてブラウザで開くだけで、全4案と参考資料をオフラインで閲覧できます（専用ソフト不要）。各案のHTMLは1ファイル完結（フォント・スタイル内蔵）なので、個別に送ることもできます。LINEで送る場合は、このフォルダを<b>Netlify Drop 等でURL化してリンクを送る</b>のがおすすめです（スマホでもワンタップで閲覧可）。
+  </div>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <b>NEXT STEP</b>
+    まずは方向性（A／B／C／D、または要素のミックス）をお選びください。「Aのヒーロー＋Bの試算表現」のような掛け合わせも可能です。次に、正式なブランド名・ロゴ・実写真・確定したいモデル数値をいただければ、選定案を仕上げていきます。
+    <div style="margin-top:18px;color:#4d525d;font-family:'Oswald';letter-spacing:.08em">© 2026 SECOND GROUND — design proposals.</div>
+  </div>
+</footer>
+
+</body>
+</html>
