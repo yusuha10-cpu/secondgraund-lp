@@ -79,7 +79,7 @@ header.site{position:fixed;top:0;left:0;right:0;z-index:60;background:rgba(10,10
 .hero .sub{font-size:clamp(15px,2.4vw,19px);color:rgba(255,255,255,.85);font-weight:500;margin-bottom:34px;line-height:1.9}
 .hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:22px}
 .hero .disc{font-size:11.5px;color:rgba(255,255,255,.45);line-height:1.7}
-.hero-right{position:relative;min-height:340px;background:url('assets/sliding.png') center 30%/cover no-repeat}
+.hero-right{position:relative;min-height:340px;background:url('assets/batter.png') center 22%/cover no-repeat}
 .hero-right::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--ink) 0%,rgba(10,10,11,.25) 32%,transparent 60%)}
 .hero-right::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(10,10,11,.5),transparent 40%)}
 .hero-badge{position:absolute;right:clamp(16px,3vw,40px);bottom:clamp(20px,4vw,46px);z-index:3;background:rgba(10,10,11,.72);backdrop-filter:blur(6px);border:1px solid var(--line);border-left:4px solid var(--red);border-radius:8px;padding:18px 22px}
@@ -168,6 +168,21 @@ header.site{position:fixed;top:0;left:0;right:0;z-index:60;background:rgba(10,10
 .case-body .stat .n{font-family:"Anton";font-size:32px;color:var(--red);line-height:1}
 .case-body .stat .u{font-size:13px;font-weight:700;color:#55565e}
 @media(max-width:900px){.case-grid{grid-template-columns:1fr;max-width:460px;margin-inline:auto}}
+/* case placeholder (実際の選手写真を後で差し込む) */
+.case .ph-empty{display:grid;place-items:center;background:repeating-linear-gradient(45deg,#15151a,#15151a 12px,#1b1b22 12px,#1b1b22 24px)}
+.case .ph-empty .pos-tag{position:absolute;top:12px;left:12px;font-family:"Oswald";font-size:11px;letter-spacing:.12em;color:var(--gold);background:rgba(0,0,0,.55);padding:4px 10px;border-radius:99px}
+.case .ph-empty .ph-label{font-family:"Oswald";font-size:13px;letter-spacing:.1em;color:#6a6a74;text-align:center;font-weight:600}
+.case .ph-empty .ph-label small{display:block;font-size:10.5px;color:#54545c;font-weight:400;margin-top:5px;letter-spacing:0}
+/* full-width image band */
+.img-band{height:clamp(200px,32vw,400px);background-size:cover;background-position:center 30%;background-repeat:no-repeat;position:relative}
+.img-band::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,10,11,.6),rgba(10,10,11,.1) 50%,rgba(227,36,43,.25))}
+/* simulation: photo beside chart */
+.sim-2col{display:grid;grid-template-columns:.82fr 1.18fr;gap:clamp(24px,4vw,48px);align-items:center}
+.sim-photo{align-self:stretch;min-height:330px;border-radius:16px;background-size:cover;background-position:center;background-repeat:no-repeat;box-shadow:0 30px 60px -34px rgba(0,0,0,.45)}
+@media(max-width:820px){.sim-2col{grid-template-columns:1fr}.sim-photo{min-height:210px}}
+/* scenario: photo as section background */
+.scenario-bg{background-size:cover;background-position:center;background-repeat:no-repeat;position:relative;isolation:isolate}
+.scenario-bg::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(10,10,11,.82),rgba(10,10,11,.93))}
 
 /* ---------- scenario ---------- */
 .table-wrap{overflow-x:auto;margin-top:40px;-webkit-overflow-scrolling:touch}
@@ -333,6 +348,9 @@ footer.site{background:var(--ink);color:rgba(255,255,255,.6);padding:54px 0 40px
   </div>
 </section>
 
+<!-- 画像帯（スライディング） -->
+<section class="img-band" style="background-image:url('assets/sliding.png')" aria-hidden="true"></section>
+
 <!-- ⑤ SIMULATION -->
 <section class="pad paper-sec" id="sim">
   <div class="wrap">
@@ -342,6 +360,9 @@ footer.site{background:var(--ink);color:rgba(255,255,255,.6);padding:54px 0 40px
       <h2>「第2の給料」を、<em>未来に</em>。</h2>
       <p class="lead">例：1戸 2,000万円 × 10戸 → 月 65〜70万円 の家賃収入（モデルケース）。保有戸数が増えるほど、毎月の収入も積み上がります。</p>
     </div>
+    <div class="sim-2col">
+      <div class="sim-photo" style="background-image:url('assets/pitcher.png')"></div>
+      <div>
     <div class="barchart">
       <div class="col"><div class="bar" style="height:29%"><span class="v">約20万/月</span></div><div class="bl">3戸</div></div>
       <div class="col"><div class="bar" style="height:48%"><span class="v">約33万/月</span></div><div class="bl">5戸</div></div>
@@ -349,6 +370,8 @@ footer.site{background:var(--ink);color:rgba(255,255,255,.6);padding:54px 0 40px
       <div class="col"><div class="bar" style="height:100%"><span class="v">約65〜70万/月</span></div><div class="bl">10戸</div></div>
     </div>
     <p class="note">※ 1戸あたり月6.6万円の家賃を想定したモデルケース・イメージです。エリア・物件・運用状況により変動し、収益を保証するものではありません。</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -363,7 +386,7 @@ footer.site{background:var(--ink);color:rgba(255,255,255,.6);padding:54px 0 40px
     </div>
     <div class="case-grid">
       <div class="case">
-        <div class="ph"><img src="assets/pitcher.png" alt="投手のイメージ" loading="lazy" /><div class="meta"><span class="pos">投手 ／ 28歳</span></div></div>
+        <div class="ph ph-empty"><span class="pos-tag">投手 ／ 28歳</span><span class="ph-label">PLAYER PHOTO<small>実際の選手写真が入ります</small></span></div>
         <div class="case-body">
           <p class="quote">現役のうちに動けたのが大きかった。引退後の景色が、まったく違って見える。</p>
           <p class="who">A選手・8戸保有</p>
@@ -371,7 +394,7 @@ footer.site{background:var(--ink);color:rgba(255,255,255,.6);padding:54px 0 40px
         </div>
       </div>
       <div class="case">
-        <div class="ph"><img src="assets/batter.png" alt="内野手のイメージ" loading="lazy" /><div class="meta"><span class="pos">内野手 ／ 31歳</span></div></div>
+        <div class="ph ph-empty"><span class="pos-tag">内野手 ／ 31歳</span><span class="ph-label">PLAYER PHOTO<small>実際の選手写真が入ります</small></span></div>
         <div class="case-body">
           <p class="quote">管理はすべて任せられる。野球に集中したまま、資産が育っていった。</p>
           <p class="who">B選手・6戸保有</p>
@@ -379,7 +402,7 @@ footer.site{background:var(--ink);color:rgba(255,255,255,.6);padding:54px 0 40px
         </div>
       </div>
       <div class="case">
-        <div class="ph"><img src="assets/outfielder.png" alt="外野手のイメージ" loading="lazy" /><div class="meta"><span class="pos">外野手 ／ 26歳</span></div></div>
+        <div class="ph ph-empty"><span class="pos-tag">外野手 ／ 26歳</span><span class="ph-label">PLAYER PHOTO<small>実際の選手写真が入ります</small></span></div>
         <div class="case-body">
           <p class="quote">年俸が高い“今”だからこそ組めた。早く始めるほど有利だと実感している。</p>
           <p class="who">C選手・10戸保有</p>
@@ -409,7 +432,7 @@ footer.site{background:var(--ink);color:rgba(255,255,255,.6);padding:54px 0 40px
 </section>
 
 <!-- ⑧ SCENARIO -->
-<section class="pad dark" id="scenario">
+<section class="pad dark scenario-bg" id="scenario" style="background-image:url('assets/outfielder.png')">
   <div class="wrap">
     <div class="shead center">
       <span class="en">SCENARIO</span>
