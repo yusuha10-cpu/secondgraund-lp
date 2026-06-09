@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SECOND GROUND ｜ 第2のグラウンド ── プロ野球選手のための複数戸不動産投資</title>
+<meta name="description" content="現役の今だからこそ組める融資で複数戸オーナーに。引退後の安定収入＝“第2のグラウンド”を築く、プロ野球選手専用の不動産投資サポート。" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@500;600;700&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --red:#e3242b; --red-d:#b3171d; --red-deep:#7c0f14;
+  --ink:#0a0a0b; --ink2:#15151a; --ink3:#1f1f26;
+  --paper:#ffffff; --paper2:#f3f0ec; --paper3:#e9e4dd;
+  --gold:#d9b46a; --line:rgba(255,255,255,.14); --maxw:1180px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:"Noto Sans JP",sans-serif;color:var(--ink);background:var(--paper);line-height:1.85;-webkit-font-smoothing:antialiased;word-break:break-word}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+.anton{font-family:"Anton",sans-serif;font-weight:400;letter-spacing:.01em}
+.osw{font-family:"Oswald",sans-serif}
+.wrap{width:min(var(--maxw),92%);margin-inline:auto}
+section{position:relative}
+
+/* ---------- shared section header ---------- */
+.shead{margin-bottom:clamp(28px,4.5vw,48px)}
+.shead.center{text-align:center}
+.shead .en{font-family:"Anton",sans-serif;font-size:clamp(40px,8vw,86px);line-height:.9;color:rgba(0,0,0,.06);letter-spacing:.02em;text-transform:uppercase;display:block}
+.dark .shead .en{color:rgba(255,255,255,.07)}
+.shead .jp-label{display:inline-flex;align-items:center;gap:9px;font-family:"Oswald";font-weight:600;font-size:12.5px;letter-spacing:.28em;color:var(--red);margin:-14px 0 14px;text-transform:uppercase}
+.shead .jp-label::before{content:"";width:24px;height:2px;background:var(--red)}
+.shead h2{font-size:clamp(26px,4.6vw,46px);font-weight:900;line-height:1.32}
+.shead h2 em{font-style:normal;color:var(--red)}
+.shead .lead{margin-top:16px;font-size:clamp(15px,2.4vw,17px);color:#4a4a52;max-width:42em}
+.dark .shead h2{color:#fff}
+.dark .shead .lead{color:rgba(255,255,255,.72)}
+.center .shead .lead,.shead.center .lead{margin-inline:auto}
+
+.pad{padding:clamp(64px,9vw,112px) 0}
+.dark{background:var(--ink);color:#fff}
+.paper2{background:var(--paper2)}
+
+/* ---------- buttons ---------- */
+.btn{display:inline-flex;align-items:center;gap:11px;justify-content:center;font-weight:700;font-size:clamp(15px,2.2vw,17px);padding:17px 36px;border-radius:4px;border:2px solid transparent;transition:transform .15s,background .15s,box-shadow .15s;cursor:pointer}
+.btn .arw{font-family:"Oswald";font-weight:700}
+.btn-red{background:var(--red);color:#fff;box-shadow:0 10px 26px rgba(227,36,43,.32)}
+.btn-red:hover{background:var(--red-d);transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.55)}
+.btn-ghost:hover{background:#fff;color:var(--ink)}
+.btn-line{background:transparent;color:var(--ink);border-color:rgba(0,0,0,.2)}
+.btn-line:hover{border-color:var(--red);color:var(--red)}
+
+/* ---------- header ---------- */
+header.site{position:fixed;top:0;left:0;right:0;z-index:60;background:rgba(10,10,11,.9);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:66px}
+.logo{display:flex;align-items:center;gap:11px;color:#fff}
+.logo .mk{width:34px;height:34px;border-radius:50%;background:var(--red);display:grid;place-items:center;box-shadow:0 0 0 4px rgba(227,36,43,.2)}
+.logo .mk svg{width:19px;height:19px}
+.logo b{font-weight:900;letter-spacing:.14em;font-size:15px;line-height:1.1}
+.logo small{display:block;font-size:9px;letter-spacing:.3em;color:rgba(255,255,255,.5);font-weight:700}
+.nav-links{display:flex;gap:26px;align-items:center}
+.nav-links a{font-size:13.5px;font-weight:700;color:rgba(255,255,255,.8);transition:color .2s}
+.nav-links a:hover{color:#fff}
+.nav .btn{padding:10px 20px;font-size:13.5px}
+@media(max-width:900px){.nav-links a:not(.btn){display:none}}
+
+/* ---------- hero ---------- */
+.hero{background:var(--ink);color:#fff;padding-top:66px;overflow:hidden;position:relative}
+.hero::after{content:"";position:absolute;left:0;top:0;width:46%;height:100%;background:radial-gradient(120% 90% at 0% 0%,rgba(227,36,43,.22),transparent 60%);pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:0;align-items:stretch;min-height:calc(100vh - 66px)}
+.hero-left{padding:clamp(40px,6vw,80px) clamp(20px,3vw,56px) clamp(40px,6vw,72px) max(calc((100vw - var(--maxw))/2),4%);display:flex;flex-direction:column;justify-content:center;position:relative;z-index:2}
+.hero .eyebrow{font-family:"Oswald";font-weight:600;font-size:clamp(11px,2vw,13.5px);letter-spacing:.24em;color:var(--gold);margin-bottom:22px;text-transform:uppercase}
+.hero h1{font-size:clamp(34px,6.4vw,68px);font-weight:900;line-height:1.18;letter-spacing:.01em;margin-bottom:22px}
+.hero h1 em{font-style:normal;color:var(--red)}
+.hero h1 .q{color:#fff}
+.hero .sub{font-size:clamp(15px,2.4vw,19px);color:rgba(255,255,255,.85);font-weight:500;margin-bottom:34px;line-height:1.9}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:22px}
+.hero .disc{font-size:11.5px;color:rgba(255,255,255,.45);line-height:1.7}
+.hero-right{position:relative;min-height:340px;background:url('assets/sliding.png') center 30%/cover no-repeat}
+.hero-right::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--ink) 0%,rgba(10,10,11,.25) 32%,transparent 60%)}
+.hero-right::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(10,10,11,.5),transparent 40%)}
+.hero-badge{position:absolute;right:clamp(16px,3vw,40px);bottom:clamp(20px,4vw,46px);z-index:3;background:rgba(10,10,11,.72);backdrop-filter:blur(6px);border:1px solid var(--line);border-left:4px solid var(--red);border-radius:8px;padding:18px 22px}
+.hero-badge .num{font-family:"Anton";font-size:clamp(30px,5vw,46px);color:#fff;line-height:1}
+.hero-badge .num span{color:var(--gold);font-size:.5em}
+.hero-badge .lab{font-size:11.5px;color:rgba(255,255,255,.72);margin-top:6px;font-weight:500}
+.scroll-ind{position:absolute;left:max(calc((100vw - var(--maxw))/2),4%);bottom:18px;z-index:3;font-family:"Oswald";font-size:11px;letter-spacing:.3em;color:rgba(255,255,255,.5);writing-mode:vertical-rl}
+@media(max-width:860px){
+  .hero-grid{grid-template-columns:1fr;min-height:0}
+  .hero-left{order:2;padding:clamp(36px,7vw,52px) 6% clamp(40px,8vw,56px)}
+  .hero-right{order:1;min-height:56vw;background-position:center 28%}
+  .hero-right::before{background:linear-gradient(0deg,var(--ink) 0%,rgba(10,10,11,.2) 50%,transparent)}
+  .scroll-ind{display:none}
+}
+
+/* ---------- empathy ---------- */
+.emp-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,64px);align-items:center}
+.stat-big{display:flex;align-items:baseline;gap:6px}
+.stat-big .n{font-family:"Anton";font-size:clamp(80px,16vw,150px);color:var(--red);line-height:.82}
+.stat-big .u{font-size:clamp(22px,4vw,34px);font-weight:900;color:#fff}
+.emp-grid p{color:rgba(255,255,255,.78);font-size:15px;margin-top:18px}
+.emp-grid .cap{font-family:"Oswald";font-size:12px;letter-spacing:.18em;color:var(--gold);text-transform:uppercase;margin-bottom:6px}
+.income-chart{background:var(--ink2);border:1px solid var(--line);border-radius:14px;padding:26px 24px}
+.income-chart .ic-t{font-size:12.5px;color:rgba(255,255,255,.6);margin-bottom:18px;font-weight:500}
+.curve{display:flex;align-items:flex-end;gap:10px;height:170px}
+.curve .col{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:8px;height:100%}
+.curve .bar{width:100%;max-width:46px;border-radius:5px 5px 0 0;background:linear-gradient(180deg,var(--red),var(--red-deep))}
+.curve .bar.lo{background:linear-gradient(180deg,#3a3a44,#26262e)}
+.curve .cl{font-size:10.5px;color:rgba(255,255,255,.6);text-align:center;font-weight:700;line-height:1.3}
+
+/* ---------- issue VS ---------- */
+.vs-wrap{display:grid;grid-template-columns:1fr auto 1fr;gap:clamp(16px,3vw,30px);align-items:center}
+.vs-card{background:#fff;border:1px solid var(--paper3);border-radius:16px;padding:clamp(26px,3.5vw,38px) clamp(22px,3vw,32px)}
+.vs-card.now{border-top:5px solid var(--red);box-shadow:0 24px 50px -30px rgba(227,36,43,.5)}
+.vs-card.after{border-top:5px solid #b9bcc2;background:var(--paper2)}
+.vs-card .tag{font-family:"Oswald";font-size:12px;letter-spacing:.16em;font-weight:700;color:#86888f;text-transform:uppercase}
+.vs-card .now-t{color:var(--red)}
+.vs-card h3{font-size:clamp(20px,3vw,27px);font-weight:900;margin:8px 0 4px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.vs-card .judge{font-family:"Anton";font-size:clamp(24px,4vw,38px)}
+.vs-card.now .judge{color:var(--red)}
+.vs-card.after .judge{color:#b9bcc2}
+.vs-card p{font-size:14px;color:#55565e;margin-top:12px}
+.vs-mid{font-family:"Anton";font-size:clamp(22px,3.4vw,34px);color:var(--ink);background:var(--gold);width:clamp(54px,8vw,76px);height:clamp(54px,8vw,76px);border-radius:50%;display:grid;place-items:center;box-shadow:0 10px 24px rgba(0,0,0,.18)}
+@media(max-width:760px){.vs-wrap{grid-template-columns:1fr}.vs-mid{margin:0 auto;transform:rotate(90deg)}}
+
+/* ---------- solution / support cards ---------- */
+.cards4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.fcard{background:var(--ink2);border:1px solid var(--line);border-radius:14px;padding:30px 26px;transition:transform .2s,border-color .2s}
+.fcard:hover{transform:translateY(-5px);border-color:rgba(227,36,43,.5)}
+.paper-sec .fcard{background:#fff;border:1px solid var(--paper3)}
+.paper-sec .fcard:hover{box-shadow:0 24px 44px -28px rgba(0,0,0,.3)}
+.fcard .no{font-family:"Anton";font-size:30px;color:var(--red);line-height:1;display:block}
+.fcard h3{font-size:18.5px;font-weight:900;margin:12px 0 10px}
+.dark .fcard h3{color:#fff}
+.fcard p{font-size:13.5px;color:#55565e;line-height:1.9}
+.dark .fcard p{color:rgba(255,255,255,.7)}
+@media(max-width:900px){.cards4{grid-template-columns:1fr 1fr}.cards3{grid-template-columns:1fr}}
+@media(max-width:520px){.cards4{grid-template-columns:1fr}}
+
+/* ---------- simulation bar chart ---------- */
+.barchart{display:flex;align-items:flex-end;gap:clamp(10px,2.5vw,26px);height:300px;padding-top:30px;border-bottom:2px solid var(--paper3);margin-top:10px}
+.dark .barchart{border-bottom-color:var(--line)}
+.barchart .col{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;gap:10px}
+.barchart .bar{width:100%;max-width:66px;background:linear-gradient(180deg,var(--red),var(--red-deep));border-radius:6px 6px 0 0;position:relative}
+.barchart .bar .v{position:absolute;top:-30px;left:50%;transform:translateX(-50%);font-family:"Oswald";font-weight:700;font-size:13.5px;white-space:nowrap;color:var(--ink)}
+.dark .barchart .bar .v{color:#fff}
+.barchart .bl{font-weight:900;font-size:15px;color:#86888f}
+.barchart .bl span{display:block;font-size:11px;color:#aaa;font-weight:500}
+.note{font-size:11.5px;color:#999;margin-top:18px;line-height:1.8}
+.dark .note{color:rgba(255,255,255,.45)}
+
+/* ---------- case ---------- */
+.case-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.case{background:#fff;border:1px solid var(--paper3);border-radius:16px;overflow:hidden;transition:transform .2s,box-shadow .2s}
+.case:hover{transform:translateY(-5px);box-shadow:0 26px 50px -30px rgba(0,0,0,.32)}
+.case .ph{aspect-ratio:4/3;position:relative;background:#111;overflow:hidden}
+.case .ph img{width:100%;height:100%;object-fit:cover;object-position:center 30%}
+.case .ph .meta{position:absolute;left:0;bottom:0;right:0;z-index:2;padding:14px 16px;background:linear-gradient(0deg,rgba(10,10,11,.85),transparent);color:#fff}
+.case .ph .meta .pos{font-family:"Oswald";font-size:12px;letter-spacing:.12em;color:var(--gold);font-weight:600}
+.case-body{padding:22px 22px 24px}
+.case-body .quote{font-size:14.5px;font-weight:700;line-height:1.85;color:#23232a}
+.case-body .quote::before{content:"“";color:var(--red);font-family:"Anton";font-size:26px;margin-right:2px;vertical-align:-6px}
+.case-body .who{font-size:12.5px;color:#86888f;margin-top:14px;font-weight:700}
+.case-body .stat{margin-top:6px;display:flex;align-items:baseline;gap:6px}
+.case-body .stat .n{font-family:"Anton";font-size:32px;color:var(--red);line-height:1}
+.case-body .stat .u{font-size:13px;font-weight:700;color:#55565e}
+@media(max-width:900px){.case-grid{grid-template-columns:1fr;max-width:460px;margin-inline:auto}}
+
+/* ---------- scenario ---------- */
+.table-wrap{overflow-x:auto;margin-top:40px;-webkit-overflow-scrolling:touch}
+table.cmp{width:100%;border-collapse:collapse;min-width:560px;border-radius:12px;overflow:hidden}
+table.cmp th,table.cmp td{padding:15px 18px;text-align:center;font-size:14.5px;border-bottom:1px solid var(--line)}
+table.cmp thead th{background:var(--red);color:#fff;font-weight:700;letter-spacing:.02em}
+table.cmp tbody th{text-align:left;font-weight:700;color:#fff;background:rgba(255,255,255,.04)}
+table.cmp tbody td{color:rgba(255,255,255,.85)}
+table.cmp .hl{font-family:"Anton";color:var(--gold);font-size:19px}
+
+/* slider simulator */
+.sim{background:var(--ink2);border:1px solid var(--line);border-radius:16px;padding:clamp(26px,4vw,40px);margin-top:46px}
+.sim h3{font-size:clamp(17px,2.6vw,21px);font-weight:900;color:#fff;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.sim h3 .pill{font-family:"Oswald";font-size:11px;letter-spacing:.1em;background:var(--red);color:#fff;padding:4px 10px;border-radius:99px}
+.sim .desc{font-size:13px;color:rgba(255,255,255,.6);margin:8px 0 26px}
+.sim-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:clamp(18px,3vw,30px);align-items:end}
+.sim .field label{display:block;font-size:12px;color:rgba(255,255,255,.6);font-weight:700;margin-bottom:10px}
+.sim .field .out{font-family:"Anton";color:#fff;font-size:clamp(26px,4vw,40px);line-height:1}
+.sim .field .out small{font-size:.42em;color:var(--gold);font-weight:400;margin-left:4px}
+.sim .field .out.rent{color:var(--gold)}
+input[type=range]{-webkit-appearance:none;width:100%;height:6px;border-radius:99px;background:linear-gradient(90deg,var(--red),var(--gold));margin-top:16px;outline:none}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:24px;height:24px;border-radius:50%;background:#fff;border:4px solid var(--red);cursor:pointer;box-shadow:0 3px 8px rgba(0,0,0,.4)}
+input[type=range]::-moz-range-thumb{width:24px;height:24px;border-radius:50%;background:#fff;border:4px solid var(--red);cursor:pointer}
+@media(max-width:760px){.sim-grid{grid-template-columns:1fr}.sim .field{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px dashed var(--line);padding-bottom:12px}}
+
+/* ---------- diagnosis (final) ---------- */
+.final{background:linear-gradient(160deg,var(--red) 0%,var(--red-deep) 100%);color:#fff;text-align:center}
+.final .en{color:rgba(255,255,255,.16)}
+.final h2{font-size:clamp(25px,4.6vw,44px);font-weight:900;line-height:1.4;margin-bottom:18px}
+.final p{font-size:clamp(15px,2.5vw,18px);color:rgba(255,255,255,.95);margin-bottom:34px}
+.final .hero-cta{justify-content:center}
+.final .btn-red{background:#fff;color:var(--red)}
+.final .btn-red:hover{background:var(--ink);color:#fff}
+.final .micro{margin-top:22px;font-size:12.5px;color:rgba(255,255,255,.8);font-weight:500}
+
+/* ---------- footer ---------- */
+footer.site{background:var(--ink);color:rgba(255,255,255,.6);padding:54px 0 40px}
+.foot-top{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;align-items:flex-start;border-bottom:1px solid var(--line);padding-bottom:26px;margin-bottom:26px}
+.foot-nav{display:flex;gap:22px;flex-wrap:wrap}
+.foot-nav a{font-size:13px;font-weight:700;color:rgba(255,255,255,.7)}
+.disc-box{font-size:11px;line-height:1.85;color:rgba(255,255,255,.4)}
+.disc-box b{color:rgba(255,255,255,.62);display:block;margin-bottom:8px;font-size:12px}
+.copy{margin-top:22px;font-family:"Oswald";font-size:11px;letter-spacing:.1em;color:rgba(255,255,255,.35)}
+
+/* ---------- sticky mobile CTA ---------- */
+.sticky{display:none}
+@media(max-width:600px){
+  .sticky{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:70;gap:8px;padding:9px;background:rgba(10,10,11,.96);border-top:1px solid var(--line)}
+  .sticky .btn{flex:1;padding:14px 6px;font-size:14px}
+  body{padding-bottom:68px}
+}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a href="#top" class="logo">
+      <span class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M5 7c3 2 3 8 0 10M19 7c-3 2-3 8 0 10"/></svg></span>
+      <span><b>SECOND GROUND</b><small>第2のグラウンド</small></span>
+    </a>
+    <nav class="nav-links">
+      <a href="#solution">解決策</a>
+      <a href="#sim">試算</a>
+      <a href="#case">事例</a>
+      <a href="#support">サポート</a>
+      <a href="#diagnosis" class="btn btn-red">無料相談はこちら <span class="arw">›</span></a>
+    </nav>
+  </div>
+</header>
+
+<!-- ① HERO -->
+<section class="hero" id="top">
+  <div class="hero-grid">
+    <div class="hero-left">
+      <p class="eyebrow">ATHLETE ASSET STRATEGY ／ 複数戸 不動産投資</p>
+      <h1>引退後も、<br /><em>安定した収入</em>を。<br /><span class="q">“第2のグラウンド”は<br />資産から生まれる。</span></h1>
+      <p class="sub">現役の今こそ、未来を支える収入源を。<br />選手生命のその先まで、戦える土台をつくる。</p>
+      <div class="hero-cta">
+        <a href="#diagnosis" class="btn btn-red">無料相談はこちら <span class="arw">›</span></a>
+        <a href="#sim" class="btn btn-ghost">収入モデルを見る</a>
+      </div>
+      <p class="disc">※ 記載の数値はすべてモデルケース・イメージです。将来の収益を保証するものではありません。</p>
+    </div>
+    <div class="hero-right">
+      <div class="hero-badge">
+        <div class="num">¥65<span>万〜</span></div>
+        <div class="lab">月の家賃収入モデル（10戸保有時）</div>
+      </div>
+    </div>
+  </div>
+  <span class="scroll-ind">SCROLL</span>
+</section>
+
+<!-- ② EMPATHY -->
+<section class="pad dark" id="empathy">
+  <div class="wrap">
+    <div class="shead">
+      <span class="en">EMPATHY</span>
+      <span class="jp-label">共感</span>
+      <h2>選手生命は短い。<br />収入のピークは、<em>一瞬</em>。</h2>
+      <p class="lead">引退後の生活やキャリアに不安を抱えるのは、当然のことです。</p>
+    </div>
+    <div class="emp-grid">
+      <div>
+        <div class="cap">平均的な現役年数</div>
+        <div class="stat-big"><span class="n">7</span><span class="u">年</span></div>
+        <p>プロ野球選手の平均的な現役年数は、決して長くありません。一方で、引退後の人生は何十年も続きます。収入が高いうちに、その先を設計できるか。それが将来を大きく左右します。</p>
+      </div>
+      <div class="income-chart">
+        <div class="ic-t">年収イメージ（モデル）</div>
+        <div class="curve">
+          <div class="col"><div class="bar" style="height:55%"></div><div class="cl">20代<br />前半</div></div>
+          <div class="col"><div class="bar" style="height:100%"></div><div class="cl">ピーク<br />30代</div></div>
+          <div class="col"><div class="bar" style="height:64%"></div><div class="cl">現役<br />後半</div></div>
+          <div class="col"><div class="bar lo" style="height:20%"></div><div class="cl">引退後</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ③ THE ISSUE -->
+<section class="pad paper-sec paper2" id="issue">
+  <div class="wrap">
+    <div class="shead center">
+      <span class="en">NOW OR NEVER</span>
+      <span class="jp-label" style="justify-content:center">問題提起</span>
+      <h2>融資が通るのは、<br /><em>“現役の今だけ”</em>。</h2>
+      <p class="lead">引退後は社会的信用が下がり、まとまった融資を受けることは難しくなります。動けるのは、現役のうち。</p>
+    </div>
+    <div class="vs-wrap">
+      <div class="vs-card now">
+        <span class="tag now-t">現役のいま</span>
+        <h3>融資枠 <span class="judge">◎</span></h3>
+        <p>高い年収と社会的信用で、優遇された条件の融資を受けやすい。複数戸の取得も狙える「最も有利な時期」。</p>
+      </div>
+      <div class="vs-mid">VS</div>
+      <div class="vs-card after">
+        <span class="tag">引退後</span>
+        <h3>融資枠 <span class="judge">△</span></h3>
+        <p>安定収入の証明が難しく、融資条件は厳しくなりがち。動き出せる選択肢が一気に狭まってしまう。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ④ SOLUTION -->
+<section class="pad dark" id="solution">
+  <div class="wrap">
+    <div class="shead center">
+      <span class="en">SOLUTION</span>
+      <span class="jp-label" style="justify-content:center">解決策</span>
+      <h2>複数戸を持つからこそ<br />得られる、<em>安定収入</em>。</h2>
+      <p class="lead">分散・規模・資産価値・完全管理。これらが揃ってはじめて、生活を支える基盤になります。</p>
+    </div>
+    <div class="cards4">
+      <div class="fcard"><span class="no">01</span><h3>リスク分散</h3><p>戸数を分けて保有することで、空室や修繕の影響を一棟に集中させない。1戸の変動が全体を揺るがしにくい構造に。</p></div>
+      <div class="fcard"><span class="no">02</span><h3>収入の規模</h3><p>1戸では小さくても、複数戸を束ねれば毎月の家賃収入はまとまった規模に。“第2の給料”と呼べる水準を目指せる。</p></div>
+      <div class="fcard"><span class="no">03</span><h3>資産価値</h3><p>ローン完済後は現物資産として手元に残る。長期保有で価値を積み上げ、老後の備えや相続対策にもつながる。</p></div>
+      <div class="fcard"><span class="no">04</span><h3>完全管理</h3><p>物件選びから管理会社とのやり取りまで一括代行。手間をかけずに運用でき、野球に集中できる環境を整える。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ⑤ SIMULATION -->
+<section class="pad paper-sec" id="sim">
+  <div class="wrap">
+    <div class="shead center">
+      <span class="en">SIMULATION</span>
+      <span class="jp-label" style="justify-content:center">試算</span>
+      <h2>「第2の給料」を、<em>未来に</em>。</h2>
+      <p class="lead">例：1戸 2,000万円 × 10戸 → 月 65〜70万円 の家賃収入（モデルケース）。保有戸数が増えるほど、毎月の収入も積み上がります。</p>
+    </div>
+    <div class="barchart">
+      <div class="col"><div class="bar" style="height:29%"><span class="v">約20万/月</span></div><div class="bl">3戸</div></div>
+      <div class="col"><div class="bar" style="height:48%"><span class="v">約33万/月</span></div><div class="bl">5戸</div></div>
+      <div class="col"><div class="bar" style="height:67%"><span class="v">約46万/月</span></div><div class="bl">7戸</div></div>
+      <div class="col"><div class="bar" style="height:100%"><span class="v">約65〜70万/月</span></div><div class="bl">10戸</div></div>
+    </div>
+    <p class="note">※ 1戸あたり月6.6万円の家賃を想定したモデルケース・イメージです。エリア・物件・運用状況により変動し、収益を保証するものではありません。</p>
+  </div>
+</section>
+
+<!-- ⑥ CASE -->
+<section class="pad dark" id="case">
+  <div class="wrap">
+    <div class="shead center">
+      <span class="en">CASE</span>
+      <span class="jp-label" style="justify-content:center">成功事例</span>
+      <h2>現役中に複数戸を<br /><em>取得した選手たち</em>。</h2>
+      <p class="lead">引退後も毎月数十万円の収入を確保し、安心して次のキャリアへ踏み出しています。</p>
+    </div>
+    <div class="case-grid">
+      <div class="case">
+        <div class="ph"><img src="assets/pitcher.png" alt="投手のイメージ" loading="lazy" /><div class="meta"><span class="pos">投手 ／ 28歳</span></div></div>
+        <div class="case-body">
+          <p class="quote">現役のうちに動けたのが大きかった。引退後の景色が、まったく違って見える。</p>
+          <p class="who">A選手・8戸保有</p>
+          <div class="stat"><span class="n">52</span><span class="u">万円／月</span></div>
+        </div>
+      </div>
+      <div class="case">
+        <div class="ph"><img src="assets/batter.png" alt="内野手のイメージ" loading="lazy" /><div class="meta"><span class="pos">内野手 ／ 31歳</span></div></div>
+        <div class="case-body">
+          <p class="quote">管理はすべて任せられる。野球に集中したまま、資産が育っていった。</p>
+          <p class="who">B選手・6戸保有</p>
+          <div class="stat"><span class="n">40</span><span class="u">万円／月</span></div>
+        </div>
+      </div>
+      <div class="case">
+        <div class="ph"><img src="assets/outfielder.png" alt="外野手のイメージ" loading="lazy" /><div class="meta"><span class="pos">外野手 ／ 26歳</span></div></div>
+        <div class="case-body">
+          <p class="quote">年俸が高い“今”だからこそ組めた。早く始めるほど有利だと実感している。</p>
+          <p class="who">C選手・10戸保有</p>
+          <div class="stat"><span class="n">66</span><span class="u">万円／月</span></div>
+        </div>
+      </div>
+    </div>
+    <p class="note">※ 事例はモデルケースであり、特定の個人を示すものではありません。成果を保証するものではありません。</p>
+  </div>
+</section>
+
+<!-- ⑦ SUPPORT -->
+<section class="pad paper-sec paper2" id="support">
+  <div class="wrap">
+    <div class="shead center">
+      <span class="en">SUPPORT</span>
+      <span class="jp-label" style="justify-content:center">信頼・サポート</span>
+      <h2>資産形成はプロに任せて、<br /><em>野球に集中</em>。</h2>
+      <p class="lead">融資・税務・管理をワンストップで支援。あなたは、グラウンドに立つことだけに集中できます。</p>
+    </div>
+    <div class="cards3">
+      <div class="fcard"><span class="no">01</span><h3>融資サポート</h3><p>選手としての信用力を最大限に活かした融資設計。金融機関との交渉や条件調整まで、専門チームが伴走します。</p></div>
+      <div class="fcard"><span class="no">02</span><h3>税務サポート</h3><p>減価償却を活かした“賢い節税”を、提携税理士と設計。所得を守りながら資産を積み上げる仕組みづくりを支援します。</p></div>
+      <div class="fcard"><span class="no">03</span><h3>管理サポート</h3><p>入居者対応から修繕、賃貸管理会社とのやり取りまで一括代行。手間ゼロを目指し、運用の負担を取り除きます。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ⑧ SCENARIO -->
+<section class="pad dark" id="scenario">
+  <div class="wrap">
+    <div class="shead center">
+      <span class="en">SCENARIO</span>
+      <span class="jp-label" style="justify-content:center">年俸別</span>
+      <h2>今の年俸が、<br /><em>未来の家賃収入</em>に変わる。</h2>
+      <p class="lead">年俸に応じて融資枠が広がり、保有戸数も収入も拡大。トップ選手なら、月100万円超の家賃収入モデルも視野に入ります。</p>
+    </div>
+    <div class="barchart">
+      <div class="col"><div class="bar" style="height:20%"><span class="v">約20万</span></div><div class="bl">〜1,500<span>万円</span></div></div>
+      <div class="col"><div class="bar" style="height:40%"><span class="v">約40万</span></div><div class="bl">3,000<span>万円</span></div></div>
+      <div class="col"><div class="bar" style="height:66%"><span class="v">約66万</span></div><div class="bl">6,000<span>万円</span></div></div>
+      <div class="col"><div class="bar" style="height:100%"><span class="v">100万超</span></div><div class="bl">1億<span>円〜</span></div></div>
+    </div>
+    <p class="note">横軸：年俸（円）／ 縦軸：月家賃収入の目安（モデル）</p>
+
+    <div class="table-wrap">
+      <table class="cmp">
+        <thead><tr><th>年俸（目安）</th><th>融資枠の目安</th><th>保有戸数</th><th>月家賃の目安</th></tr></thead>
+        <tbody>
+          <tr><th>〜1,500万円</th><td>〜5,000万円</td><td>2〜3戸</td><td class="hl">約20万円</td></tr>
+          <tr><th>3,000万円</th><td>〜1.0億円</td><td>4〜6戸</td><td class="hl">約40万円</td></tr>
+          <tr><th>6,000万円</th><td>〜2.0億円</td><td>7〜10戸</td><td class="hl">約66万円</td></tr>
+          <tr><th>1億円〜</th><td>3.0億円〜</td><td>12戸〜</td><td class="hl">100万円超</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="sim">
+      <h3><span class="pill">SIMULATOR</span> かんたん 融資イメージ シミュレーター</h3>
+      <p class="desc">現在の年俸をスライドして、保有戸数と月家賃のモデルイメージを確認できます。</p>
+      <div class="sim-grid">
+        <div class="field">
+          <label>現在の年俸</label>
+          <div class="out"><span id="salaryOut">3,000</span> <small>万円</small></div>
+          <input type="range" id="salary" min="500" max="15000" step="100" value="3000" />
+        </div>
+        <div class="field">
+          <label>保有戸数の目安</label>
+          <div class="out"><span id="unitsOut">8</span> <small>戸</small></div>
+        </div>
+        <div class="field">
+          <label>月家賃収入の目安</label>
+          <div class="out rent">約 <span id="rentOut">53</span> <small>万円/月</small></div>
+        </div>
+      </div>
+      <p class="note">※ 簡易モデルによるイメージ算出です。実際の融資可否・条件・収益は個別審査と市況により異なり、保証するものではありません。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ⑨ DIAGNOSIS -->
+<section class="pad final" id="diagnosis">
+  <div class="wrap">
+    <span class="en anton" style="font-size:clamp(40px,8vw,86px);display:block;line-height:.9">DIAGNOSIS</span>
+    <span class="jp-label" style="justify-content:center;color:rgba(255,255,255,.85)">無料診断</span>
+    <h2>あなたが現役のうちに、<br />複数戸オーナーになれるか診断を！</h2>
+    <p>融資可能額やプランを、無料でチェック。<br />未来の安心は、今の行動から始まります。</p>
+    <div class="hero-cta">
+      <a href="#" class="btn btn-red">無料診断を受ける <span class="arw">›</span></a>
+      <a href="#" class="btn btn-ghost">資料請求はこちら</a>
+    </div>
+    <p class="micro">最短1分・しつこい勧誘はありません ／ LINE・フォームから相談OK</p>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-top">
+      <a href="#top" class="logo"><span class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M5 7c3 2 3 8 0 10M19 7c-3 2-3 8 0 10"/></svg></span><span><b>SECOND GROUND</b><small>第2のグラウンド</small></span></a>
+      <nav class="foot-nav">
+        <a href="#solution">解決策</a><a href="#sim">試算</a><a href="#case">事例</a><a href="#support">サポート</a><a href="#diagnosis">無料診断</a>
+      </nav>
+    </div>
+    <div class="disc-box">
+      <b>ご注意（リスク・免責事項）</b>
+      不動産投資には、空室・家賃下落・金利上昇・地価変動・修繕費の発生・流動性などのリスクがあります。本ページに記載の年収・戸数・家賃・融資枠・節税額などの数値は、すべてモデルケース／イメージであり、将来の収益・節税効果・融資の実行を保証するものではありません。実際の融資可否や条件は金融機関の審査により、収益は物件・エリア・運用状況・経済環境により変動します。掲載の事例は特定の個人を示すものではありません。ご契約に際しては、必ず重要事項説明等の内容をご確認のうえ、ご自身の判断と責任において意思決定を行ってください。
+    </div>
+    <div class="copy">© 2026 SECOND GROUND. All rights reserved.</div>
+  </div>
+</footer>
+
+<div class="sticky">
+  <a href="#diagnosis" class="btn btn-ghost" style="border-color:rgba(255,255,255,.4)">LINEで相談</a>
+  <a href="#diagnosis" class="btn btn-red">無料診断を受ける</a>
+</div>
+
+<script>
+(function(){
+  var s=document.getElementById('salary');
+  if(!s)return;
+  var sO=document.getElementById('salaryOut'),uO=document.getElementById('unitsOut'),rO=document.getElementById('rentOut');
+  function fmt(n){return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g,',');}
+  function calc(){
+    var man=parseInt(s.value,10);              // 年俸（万円）
+    // 融資枠の目安 ≈ 年俸 × 約3.3倍 → 1戸2,000万円で割って戸数
+    var loan=man*3.3;                           // 万円
+    var units=Math.max(1,Math.round(loan/2000));
+    if(units>20)units=20;
+    var rent=Math.round(units*6.6);            // 1戸 月6.6万円
+    sO.textContent=fmt(man);
+    uO.textContent=units;
+    rO.textContent=fmt(rent);
+  }
+  s.addEventListener('input',calc);
+  calc();
+})();
+</script>
+
+</body>
+</html>
